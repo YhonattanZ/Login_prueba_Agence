@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:prueba_agence_br/src/common/constants.dart';
 
 import 'package:prueba_agence_br/src/widgets/home/drawer.dart';
-
+import 'package:animate_do/animate_do.dart';
 import '../../widgets/home/card_product.dart';
 import '../../widgets/home/custom_app_bar.dart';
 import '../../widgets/home/sugerences_menu.dart';
@@ -38,7 +36,8 @@ class _HomePageState extends State<HomePage> {
       resizeToAvoidBottomInset: false,
       drawer: const DrawerMenu(),
       appBar: PreferredSize(
-          preferredSize: Size.fromHeight(height / 6), child: CustomAppBar()),
+          preferredSize: Size.fromHeight(height / 6),
+          child: const CustomAppBar()),
       body: Stack(children: [
         Column(children: [
           const SugerencesMenu(
@@ -51,8 +50,11 @@ class _HomePageState extends State<HomePage> {
               shrinkWrap: true,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
-                return CardProduct(
-                    width: width * 0.40, image: 'assets/images/chifuyu2.jpg');
+                return FadeIn(
+                  delay: Duration(milliseconds: (500 + (200 * (index + 2)))),
+                  child: CardProduct(
+                      width: width * 0.40, image: 'assets/images/chifuyu2.jpg'),
+                );
               },
             ),
           ),
@@ -64,8 +66,11 @@ class _HomePageState extends State<HomePage> {
               shrinkWrap: true,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
-                return CardProduct(
-                    width: width * 0.40, image: 'assets/images/power.jpg');
+                return FadeIn(
+                  delay: Duration(milliseconds: (1000 + (200 * (index + 2)))),
+                  child: CardProduct(
+                      width: width * 0.40, image: 'assets/images/power.jpg'),
+                );
               },
             ),
           ),

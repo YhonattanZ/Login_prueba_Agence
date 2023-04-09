@@ -52,7 +52,8 @@ dependencies:
   geolocator: ^9.0.2
   geocoding: ^2.0.5
   location: ^4.4.0
-
+  #Delay loading
+  animate_do: ^3.0.2
   
 
 

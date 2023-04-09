@@ -45,7 +45,7 @@ class GoogleMapsService {
   }
 
   void centerPosition() {
-    animateCameraPosition(position!.latitude, position!.longitude);
+    animateCameraPosition(position?.latitude ?? 0, position?.longitude ?? 0);
   }
 
   Future animateCameraPosition(double lat, double lng) async {
@@ -54,7 +54,7 @@ class GoogleMapsService {
         CameraPosition(target: LatLng(lat, lng), zoom: 14, bearing: 0)));
   }
 
-  Future<Position> _determinePosition() async {
+  Future<Position> determinePosition() async {
     bool serviceEnabled;
     LocationPermission permission;
     serviceEnabled = await Geolocator.isLocationServiceEnabled();
@@ -74,7 +74,8 @@ class GoogleMapsService {
       return Future.error(
           'Location permissions are permanently denied, we cannot request permissions.');
     }
-    return await Geolocator.getCurrentPosition();
+    return await Geolocator.getCurrentPosition(
+        desiredAccuracy: LocationAccuracy.high);
   }
 
   void onMapCreate(GoogleMapController controller) {
@@ -85,9 +86,9 @@ class GoogleMapsService {
 
   void updateLocation() async {
     try {
-      await _determinePosition();
+      await determinePosition();
       position = await Geolocator.getLastKnownPosition();
-      //Guardar coordenadas del delivery
+      animateCameraPosition(position!.latitude, position!.longitude);
     } catch (e) {
       print('Error: $e');
     }

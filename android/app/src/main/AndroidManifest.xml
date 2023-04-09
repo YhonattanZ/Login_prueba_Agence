@@ -2,7 +2,10 @@
     package="com.example.prueba_agence_br">
     
     <!--<uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove"/> -->    
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET"/>]
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  
    <application
         android:label="prueba_agence_br"
         android:name="${applicationName}"
@@ -36,7 +39,8 @@
             <!-- FACEBOOK CONFIGURATIONS -->
         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
         <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
-
+        <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyAcAxGAspyKdQoQfVpqty-0SAFHXuq0QAk"/>
         <activity android:name="com.facebook.FacebookActivity"
                 android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
                 android:label="@string/app_name" />

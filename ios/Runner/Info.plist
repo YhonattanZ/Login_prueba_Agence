@@ -19,7 +19,8 @@
 		</dict>
 	</array>
 	<!-- End of the Google Sign-in Section -->
-
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>The app needs location permission</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
