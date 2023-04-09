@@ -44,6 +44,16 @@ class GoogleMapsService {
     }
   }
 
+  Future<Position> getUserCurrentLocation() async {
+    await Geolocator.requestPermission()
+        .then((value) {})
+        .onError((error, stackTrace) async {
+      await Geolocator.requestPermission();
+      print("ERROR" + error.toString());
+    });
+    return await Geolocator.getCurrentPosition();
+  }
+
   void centerPosition() {
     animateCameraPosition(position?.latitude ?? 0, position?.longitude ?? 0);
   }

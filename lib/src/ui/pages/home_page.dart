@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> {
           ),
           const SugerencesMenu(title: 'Recommended for you'),
           Expanded(
-            flex: 4,
+            flex: 3,
             child: ListView.builder(
               itemCount: products.length,
               shrinkWrap: true,
@@ -69,7 +69,7 @@ class _HomePageState extends State<HomePage> {
                 return FadeIn(
                   delay: Duration(milliseconds: (1000 + (200 * (index + 2)))),
                   child: CardProduct(
-                      width: width * 0.40, image: 'assets/images/power.jpg'),
+                      width: width * 0.38, image: 'assets/images/power.jpg'),
                 );
               },
             ),

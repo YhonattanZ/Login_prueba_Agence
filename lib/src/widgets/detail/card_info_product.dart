@@ -68,36 +68,43 @@ class CardInfoProduct extends StatelessWidget {
 
   Widget _productInfo(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 35, vertical: 10),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          _imageClient(),
-          const SizedBox(width: 15),
-          Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text('Poster Anime',
-                  style: GoogleFonts.lato(
-                    fontSize: 20,
-                    fontStyle: FontStyle.italic,
-                  )),
-              SizedBox(
-                height: size.height * 0.14,
-                width: size.width * 0.4,
-                child: Text(
-                  'Power (パワー, Pawā) era la Mujer Demonio Sangre (血ちの魔ま人じん, Chi no majin) y una Cazadora de Demonios de Seguridad Pública',
-                  style: GoogleFonts.lato(
-                      color: kSecondaryColor,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w600),
-                ),
-              )
-            ],
-          )
-        ],
+    return Expanded(
+      flex: 1,
+      child: Container(
+        margin: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            _imageClient(),
+            const SizedBox(width: 15),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Poster Anime',
+                    style: GoogleFonts.lato(
+                      fontSize: 20,
+                      fontStyle: FontStyle.italic,
+                    )),
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                    padding: EdgeInsets.only(right: 5),
+                    height: size.height * 0.14,
+                    width: size.width * 0.4,
+                    child: Text(
+                      'Power (パワー, Pawā) era la Mujer Demonio Sangre',
+                      style: GoogleFonts.lato(
+                          color: kSecondaryColor,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600),
+                    ),
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
@@ -105,7 +112,7 @@ class CardInfoProduct extends StatelessWidget {
   Widget _imageClient() {
     return SizedBox(
       height: 150,
-      width: 150,
+      width: 130,
       child: ClipRRect(
         borderRadius: BorderRadius.circular(15),
         child: const FadeInImage(
