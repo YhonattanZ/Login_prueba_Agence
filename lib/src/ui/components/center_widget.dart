@@ -3,8 +3,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:prueba_agence_br/src/common/constants.dart';
 
-import '../../../widgets/login/center_widget_clipper.dart';
-import '../../../widgets/login/center_widget_painter.dart';
+import '../../widgets/login/center_widget_clipper.dart';
+import '../../widgets/login/center_widget_painter.dart';
 
 class CenterShape extends StatelessWidget {
   const CenterShape({Key? key, required this.size}) : super(key: key);

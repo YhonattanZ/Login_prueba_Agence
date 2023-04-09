@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:prueba_agence_br/src/network/services/fb_login_services.dart';
+import 'package:prueba_agence_br/src/network/services/google_signin_services.dart';
 
 class LoginFbGoogle extends StatefulWidget {
   const LoginFbGoogle({super.key});
@@ -46,7 +47,9 @@ class _LoginFbGoogleState extends State<LoginFbGoogle> {
                       side: BorderSide(color: Colors.grey.shade300),
                       shape: const CircleBorder(),
                       backgroundColor: Colors.white),
-                  onPressed: () {},
+                  onPressed: () {
+                    GoogleSignInService.signInWithGoogle(context);
+                  },
                   child: const Icon(
                     FontAwesomeIcons.google,
                     color: Colors.red,

@@ -7,7 +7,7 @@ class FbLogin {
   bool? _checking = true;
 
   ifUserIsLoggedIn(BuildContext context) async {
-    final accessToken = await FacebookAuth.instance.accessToken;
+    final AccessToken? accessToken = await FacebookAuth.instance.accessToken;
     if (accessToken!.token.isNotEmpty) {
       _checking = false;
     }

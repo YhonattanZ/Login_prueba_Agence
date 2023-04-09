@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "893401638381",
+    "project_id": "prueba-agence",
+    "storage_bucket": "prueba-agence.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893401638381:android:4dc6d96ac698726b01f3e4",
+        "android_client_info": {
+          "package_name": "com.example.prueba_agence_br"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "893401638381-36ucclfqch82qsluce1795ggc3blqh8r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.prueba_agence_br",
+            "certificate_hash": "516de2cf9a7901e97bbd0510c2f0a6404a9a0e8b"
+          }
+        },
+        {
+          "client_id": "893401638381-048ule0vplqh9aqnlv4tfvmt4mceujtd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcAxGAspyKdQoQfVpqty-0SAFHXuq0QAk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "893401638381-048ule0vplqh9aqnlv4tfvmt4mceujtd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
